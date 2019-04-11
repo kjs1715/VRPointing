@@ -23,7 +23,7 @@ public class randChoose1 : MonoBehaviour {
     private Vector3 offset;
     //public Vector3 Offset;
 
-    private int randNum;
+    public static int randNum = -1;
     private HashSet<int> numbers;
     private GameObject []findBall;
     private GameObject [] findSideBall;
@@ -40,6 +40,7 @@ public class randChoose1 : MonoBehaviour {
     private string progressHintString;
     private bool ballsDisappeared = false;
     private bool start = false;
+    public static bool isWaiting = false;
    
     int[] randomNumbers;
     int hasused = 0;
@@ -119,6 +120,7 @@ public class randChoose1 : MonoBehaviour {
         initBallInterface();
         if (trigger.GetStateDown(SteamVR_Input_Sources.Any))
         {
+            isWaiting = false;
             if (IsInvoking())
             {
                 return;
@@ -364,6 +366,9 @@ public class randChoose1 : MonoBehaviour {
         //numbers.Add(randNum);
         changeColor();
         audioHint.Play();
+
+        isWaiting = true;
+
         LogOut.printLog(randNum + "号小球亮起");
     }
 

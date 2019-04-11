@@ -123,20 +123,20 @@ GameObject:
   - component: {fileID: 3556057}
   - component: {fileID: 3556056}
   - component: {fileID: 3556055}
-  - component: {fileID: 3556054}
   - component: {fileID: 3556066}
   - component: {fileID: 3556061}
   - component: {fileID: 3556059}
   - component: {fileID: 3556058}
   - component: {fileID: 3556053}
   - component: {fileID: 3556060}
-  - component: {fileID: 3556062}
   - component: {fileID: 3556063}
   - component: {fileID: 3556065}
   - component: {fileID: 3556064}
+  - component: {fileID: 3556054}
+  - component: {fileID: 3556067}
   m_Layer: 0
   m_Name: Sphere (4)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,10 +164,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 3556052}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &3556055
 MeshRenderer:
@@ -222,7 +222,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3556058
 MonoBehaviour:
@@ -349,22 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3556062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 3556052}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &3556063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +375,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -503,6 +487,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3556067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3556052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &6748167
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,19 +515,19 @@ GameObject:
   - component: {fileID: 6748172}
   - component: {fileID: 6748171}
   - component: {fileID: 6748170}
-  - component: {fileID: 6748169}
   - component: {fileID: 6748180}
   - component: {fileID: 6748175}
   - component: {fileID: 6748173}
   - component: {fileID: 6748168}
   - component: {fileID: 6748174}
-  - component: {fileID: 6748176}
   - component: {fileID: 6748177}
   - component: {fileID: 6748179}
   - component: {fileID: 6748178}
+  - component: {fileID: 6748169}
+  - component: {fileID: 6748181}
   m_Layer: 0
   m_Name: Sphere (17)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,10 +555,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 6748167}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &6748170
 MeshRenderer:
@@ -611,7 +613,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6748173
 MonoBehaviour:
@@ -711,22 +713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6748176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 6748167}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &6748177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,7 +739,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -865,6 +851,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6748181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6748167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &7552392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,7 +1242,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39140115
 GameObject:
@@ -2363,7 +2367,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &53045491
 GameObject:
@@ -3500,19 +3504,19 @@ GameObject:
   - component: {fileID: 137320217}
   - component: {fileID: 137320216}
   - component: {fileID: 137320215}
-  - component: {fileID: 137320214}
   - component: {fileID: 137320225}
   - component: {fileID: 137320220}
   - component: {fileID: 137320218}
   - component: {fileID: 137320213}
   - component: {fileID: 137320219}
-  - component: {fileID: 137320221}
   - component: {fileID: 137320222}
   - component: {fileID: 137320224}
   - component: {fileID: 137320223}
+  - component: {fileID: 137320214}
+  - component: {fileID: 137320226}
   m_Layer: 0
   m_Name: Sphere (12)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3540,10 +3544,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 137320212}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &137320215
 MeshRenderer:
@@ -3598,7 +3602,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &137320218
 MonoBehaviour:
@@ -3698,22 +3702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &137320221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 137320212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &137320222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3740,7 +3728,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3852,6 +3840,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &137320226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137320212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &157873169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,19 +3868,19 @@ GameObject:
   - component: {fileID: 157873182}
   - component: {fileID: 157873181}
   - component: {fileID: 157873180}
-  - component: {fileID: 157873179}
   - component: {fileID: 157873178}
   - component: {fileID: 157873177}
   - component: {fileID: 157873176}
   - component: {fileID: 157873175}
   - component: {fileID: 157873174}
-  - component: {fileID: 157873173}
   - component: {fileID: 157873172}
   - component: {fileID: 157873171}
   - component: {fileID: 157873170}
+  - component: {fileID: 157873179}
+  - component: {fileID: 157873183}
   m_Layer: 0
   m_Name: Sphere (40)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3888,7 +3894,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4006,22 +4012,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &157873173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 157873169}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &157873174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4154,10 +4144,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 157873169}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &157873180
 MeshRenderer:
@@ -4214,6 +4204,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157873183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157873169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &160549106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4224,19 +4232,19 @@ GameObject:
   - component: {fileID: 160549119}
   - component: {fileID: 160549118}
   - component: {fileID: 160549117}
-  - component: {fileID: 160549116}
   - component: {fileID: 160549115}
   - component: {fileID: 160549114}
   - component: {fileID: 160549113}
   - component: {fileID: 160549112}
   - component: {fileID: 160549111}
-  - component: {fileID: 160549110}
   - component: {fileID: 160549109}
   - component: {fileID: 160549108}
   - component: {fileID: 160549107}
+  - component: {fileID: 160549116}
+  - component: {fileID: 160549120}
   m_Layer: 0
   m_Name: Sphere (39)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4250,7 +4258,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4368,22 +4376,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &160549110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 160549106}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &160549111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4516,10 +4508,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 160549106}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &160549117
 MeshRenderer:
@@ -4576,6 +4568,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160549120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160549106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,19 +4693,19 @@ GameObject:
   - component: {fileID: 184413979}
   - component: {fileID: 184413978}
   - component: {fileID: 184413977}
-  - component: {fileID: 184413976}
   - component: {fileID: 184413975}
   - component: {fileID: 184413974}
   - component: {fileID: 184413973}
   - component: {fileID: 184413972}
   - component: {fileID: 184413971}
-  - component: {fileID: 184413970}
   - component: {fileID: 184413969}
   - component: {fileID: 184413968}
   - component: {fileID: 184413967}
+  - component: {fileID: 184413976}
+  - component: {fileID: 184413980}
   m_Layer: 0
   m_Name: Sphere (30)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4709,7 +4719,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4827,22 +4837,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &184413970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 184413966}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &184413971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4975,10 +4969,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 184413966}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &184413977
 MeshRenderer:
@@ -5035,6 +5029,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184413980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184413966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &230237427
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,20 +5437,20 @@ GameObject:
   - component: {fileID: 272712008}
   - component: {fileID: 272712007}
   - component: {fileID: 272712006}
-  - component: {fileID: 272712005}
   - component: {fileID: 272712016}
   - component: {fileID: 272712011}
   - component: {fileID: 272712003}
   - component: {fileID: 272712009}
   - component: {fileID: 272712004}
   - component: {fileID: 272712010}
-  - component: {fileID: 272712012}
   - component: {fileID: 272712013}
   - component: {fileID: 272712015}
   - component: {fileID: 272712014}
+  - component: {fileID: 272712005}
+  - component: {fileID: 272712017}
   m_Layer: 0
   m_Name: Sphere (9)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5478,10 +5490,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272712002}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &272712006
 MeshRenderer:
@@ -5536,7 +5548,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &272712009
 MonoBehaviour:
@@ -5636,22 +5648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &272712012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 272712002}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &272712013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5675,10 +5671,10 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 272712002}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5790,6 +5786,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &272712017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 272712002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &283316940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6163,7 +6177,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &283946495
 GameObject:
@@ -6925,19 +6939,19 @@ GameObject:
   - component: {fileID: 300380556}
   - component: {fileID: 300380555}
   - component: {fileID: 300380554}
-  - component: {fileID: 300380553}
   - component: {fileID: 300380552}
   - component: {fileID: 300380551}
   - component: {fileID: 300380550}
   - component: {fileID: 300380549}
   - component: {fileID: 300380548}
-  - component: {fileID: 300380547}
   - component: {fileID: 300380546}
   - component: {fileID: 300380545}
   - component: {fileID: 300380544}
+  - component: {fileID: 300380553}
+  - component: {fileID: 300380557}
   m_Layer: 0
   m_Name: Sphere (27)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6951,7 +6965,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7069,22 +7083,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &300380547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 300380543}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &300380548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7217,10 +7215,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 300380543}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &300380554
 MeshRenderer:
@@ -7277,6 +7275,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &300380557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300380543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &316692014
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,7 +7666,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &327376163
 GameObject:
@@ -8182,19 +8198,19 @@ GameObject:
   - component: {fileID: 335978458}
   - component: {fileID: 335978457}
   - component: {fileID: 335978456}
-  - component: {fileID: 335978455}
   - component: {fileID: 335978454}
   - component: {fileID: 335978453}
   - component: {fileID: 335978452}
   - component: {fileID: 335978451}
   - component: {fileID: 335978450}
-  - component: {fileID: 335978449}
   - component: {fileID: 335978448}
   - component: {fileID: 335978447}
   - component: {fileID: 335978446}
+  - component: {fileID: 335978455}
+  - component: {fileID: 335978459}
   m_Layer: 0
   m_Name: Sphere (33)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8208,7 +8224,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8326,22 +8342,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &335978449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 335978445}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &335978450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8474,10 +8474,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 335978445}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &335978456
 MeshRenderer:
@@ -8534,6 +8534,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &335978459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335978445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &412601093
 GameObject:
   m_ObjectHideFlags: 0
@@ -8544,19 +8562,19 @@ GameObject:
   - component: {fileID: 412601106}
   - component: {fileID: 412601105}
   - component: {fileID: 412601104}
-  - component: {fileID: 412601103}
   - component: {fileID: 412601102}
   - component: {fileID: 412601101}
   - component: {fileID: 412601100}
   - component: {fileID: 412601099}
   - component: {fileID: 412601098}
-  - component: {fileID: 412601097}
   - component: {fileID: 412601096}
   - component: {fileID: 412601095}
   - component: {fileID: 412601094}
+  - component: {fileID: 412601103}
+  - component: {fileID: 412601107}
   m_Layer: 0
   m_Name: Sphere (48)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8570,7 +8588,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8688,22 +8706,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &412601097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 412601093}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &412601098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8836,10 +8838,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 412601093}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &412601104
 MeshRenderer:
@@ -8896,6 +8898,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &412601107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412601093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &425095075
 GameObject:
   m_ObjectHideFlags: 0
@@ -9300,7 +9320,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440957359
 GameObject:
@@ -9344,19 +9364,19 @@ GameObject:
   - component: {fileID: 448143352}
   - component: {fileID: 448143351}
   - component: {fileID: 448143350}
-  - component: {fileID: 448143349}
   - component: {fileID: 448143360}
   - component: {fileID: 448143355}
   - component: {fileID: 448143353}
   - component: {fileID: 448143348}
   - component: {fileID: 448143354}
-  - component: {fileID: 448143356}
   - component: {fileID: 448143357}
   - component: {fileID: 448143359}
   - component: {fileID: 448143358}
+  - component: {fileID: 448143349}
+  - component: {fileID: 448143361}
   m_Layer: 0
   m_Name: Sphere (13)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9384,10 +9404,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 448143347}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &448143350
 MeshRenderer:
@@ -9442,7 +9462,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &448143353
 MonoBehaviour:
@@ -9542,22 +9562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &448143356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 448143347}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &448143357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9584,7 +9588,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9696,6 +9700,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &448143361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 448143347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &454215348
 GameObject:
   m_ObjectHideFlags: 0
@@ -10081,19 +10103,19 @@ GameObject:
   - component: {fileID: 459166179}
   - component: {fileID: 459166178}
   - component: {fileID: 459166177}
-  - component: {fileID: 459166176}
   - component: {fileID: 459166175}
   - component: {fileID: 459166174}
   - component: {fileID: 459166173}
   - component: {fileID: 459166172}
   - component: {fileID: 459166171}
-  - component: {fileID: 459166170}
   - component: {fileID: 459166169}
   - component: {fileID: 459166168}
   - component: {fileID: 459166167}
+  - component: {fileID: 459166176}
+  - component: {fileID: 459166180}
   m_Layer: 0
   m_Name: Sphere (23)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10107,7 +10129,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10225,22 +10247,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &459166170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 459166166}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &459166171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10373,10 +10379,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 459166166}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &459166177
 MeshRenderer:
@@ -10433,6 +10439,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459166180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 459166166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &485481071
 GameObject:
   m_ObjectHideFlags: 0
@@ -11193,19 +11217,19 @@ GameObject:
   - component: {fileID: 529368495}
   - component: {fileID: 529368494}
   - component: {fileID: 529368493}
-  - component: {fileID: 529368492}
   - component: {fileID: 529368491}
   - component: {fileID: 529368490}
   - component: {fileID: 529368489}
   - component: {fileID: 529368488}
   - component: {fileID: 529368487}
-  - component: {fileID: 529368486}
   - component: {fileID: 529368485}
   - component: {fileID: 529368484}
   - component: {fileID: 529368483}
+  - component: {fileID: 529368492}
+  - component: {fileID: 529368496}
   m_Layer: 0
   m_Name: Sphere (31)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11219,7 +11243,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -11337,22 +11361,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &529368486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 529368482}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &529368487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11485,10 +11493,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529368482}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &529368493
 MeshRenderer:
@@ -11545,6 +11553,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529368496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 529368482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &554038116
 GameObject:
   m_ObjectHideFlags: 0
@@ -12080,7 +12106,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.06}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &589120837
 GameObject:
@@ -12092,19 +12118,19 @@ GameObject:
   - component: {fileID: 589120850}
   - component: {fileID: 589120849}
   - component: {fileID: 589120848}
-  - component: {fileID: 589120847}
   - component: {fileID: 589120846}
   - component: {fileID: 589120845}
   - component: {fileID: 589120844}
   - component: {fileID: 589120843}
   - component: {fileID: 589120842}
-  - component: {fileID: 589120841}
   - component: {fileID: 589120840}
   - component: {fileID: 589120839}
   - component: {fileID: 589120838}
+  - component: {fileID: 589120847}
+  - component: {fileID: 589120851}
   m_Layer: 0
   m_Name: Sphere (35)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12118,7 +12144,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12236,22 +12262,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &589120841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 589120837}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &589120842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12384,10 +12394,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589120837}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &589120848
 MeshRenderer:
@@ -12444,6 +12454,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589120851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 589120837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!4 &602091837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431768, guid: cbfd31aaac017204885fcc03f0579a1a,
@@ -12459,19 +12487,19 @@ GameObject:
   - component: {fileID: 617406339}
   - component: {fileID: 617406338}
   - component: {fileID: 617406337}
-  - component: {fileID: 617406336}
   - component: {fileID: 617406335}
   - component: {fileID: 617406334}
   - component: {fileID: 617406333}
   - component: {fileID: 617406332}
   - component: {fileID: 617406331}
-  - component: {fileID: 617406330}
   - component: {fileID: 617406329}
   - component: {fileID: 617406328}
   - component: {fileID: 617406327}
+  - component: {fileID: 617406336}
+  - component: {fileID: 617406340}
   m_Layer: 0
   m_Name: Sphere (36)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12485,7 +12513,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12603,22 +12631,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &617406330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 617406326}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &617406331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12751,10 +12763,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617406326}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &617406337
 MeshRenderer:
@@ -12811,6 +12823,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &617406340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 617406326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &618171934
 GameObject:
   m_ObjectHideFlags: 0
@@ -13332,7 +13362,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657693789
 GameObject:
@@ -13445,19 +13475,19 @@ GameObject:
   - component: {fileID: 707129720}
   - component: {fileID: 707129719}
   - component: {fileID: 707129718}
-  - component: {fileID: 707129717}
   - component: {fileID: 707129716}
   - component: {fileID: 707129715}
   - component: {fileID: 707129714}
   - component: {fileID: 707129713}
   - component: {fileID: 707129712}
-  - component: {fileID: 707129711}
   - component: {fileID: 707129710}
   - component: {fileID: 707129709}
   - component: {fileID: 707129708}
+  - component: {fileID: 707129717}
+  - component: {fileID: 707129721}
   m_Layer: 0
   m_Name: Sphere (29)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13471,7 +13501,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13589,22 +13619,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &707129711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 707129707}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &707129712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13737,10 +13751,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 707129707}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &707129718
 MeshRenderer:
@@ -13797,6 +13811,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707129721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 707129707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &754397840
 GameObject:
   m_ObjectHideFlags: 0
@@ -13807,19 +13839,19 @@ GameObject:
   - component: {fileID: 754397845}
   - component: {fileID: 754397844}
   - component: {fileID: 754397843}
-  - component: {fileID: 754397842}
   - component: {fileID: 754397853}
   - component: {fileID: 754397848}
   - component: {fileID: 754397846}
   - component: {fileID: 754397841}
   - component: {fileID: 754397847}
-  - component: {fileID: 754397849}
   - component: {fileID: 754397850}
   - component: {fileID: 754397852}
   - component: {fileID: 754397851}
+  - component: {fileID: 754397842}
+  - component: {fileID: 754397854}
   m_Layer: 0
   m_Name: Sphere (11)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13847,10 +13879,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 754397840}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &754397843
 MeshRenderer:
@@ -13905,7 +13937,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &754397846
 MonoBehaviour:
@@ -14005,22 +14037,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &754397849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754397840}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &754397850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14047,7 +14063,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14159,6 +14175,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &754397854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 754397840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &757558416
 GameObject:
   m_ObjectHideFlags: 0
@@ -14169,19 +14203,19 @@ GameObject:
   - component: {fileID: 757558421}
   - component: {fileID: 757558420}
   - component: {fileID: 757558419}
-  - component: {fileID: 757558418}
   - component: {fileID: 757558429}
   - component: {fileID: 757558424}
   - component: {fileID: 757558422}
   - component: {fileID: 757558417}
   - component: {fileID: 757558423}
-  - component: {fileID: 757558425}
   - component: {fileID: 757558426}
   - component: {fileID: 757558428}
   - component: {fileID: 757558427}
+  - component: {fileID: 757558418}
+  - component: {fileID: 757558430}
   m_Layer: 0
   m_Name: Sphere (14)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14209,10 +14243,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 757558416}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &757558419
 MeshRenderer:
@@ -14267,7 +14301,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &757558422
 MonoBehaviour:
@@ -14367,22 +14401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &757558425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 757558416}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &757558426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14409,7 +14427,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14521,6 +14539,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &757558430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 757558416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &768021569
 GameObject:
   m_ObjectHideFlags: 0
@@ -14531,19 +14567,19 @@ GameObject:
   - component: {fileID: 768021582}
   - component: {fileID: 768021581}
   - component: {fileID: 768021580}
-  - component: {fileID: 768021579}
   - component: {fileID: 768021578}
   - component: {fileID: 768021577}
   - component: {fileID: 768021576}
   - component: {fileID: 768021575}
   - component: {fileID: 768021574}
-  - component: {fileID: 768021573}
   - component: {fileID: 768021572}
   - component: {fileID: 768021571}
   - component: {fileID: 768021570}
+  - component: {fileID: 768021579}
+  - component: {fileID: 768021583}
   m_Layer: 0
   m_Name: Sphere (34)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14557,7 +14593,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14675,22 +14711,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &768021573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 768021569}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &768021574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14823,10 +14843,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 768021569}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &768021580
 MeshRenderer:
@@ -14883,6 +14903,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &768021583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768021569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &774027427
 GameObject:
   m_ObjectHideFlags: 0
@@ -15445,19 +15483,20 @@ GameObject:
   - component: {fileID: 785484620}
   - component: {fileID: 785484619}
   - component: {fileID: 785484618}
-  - component: {fileID: 785484617}
   - component: {fileID: 785484616}
   - component: {fileID: 785484615}
   - component: {fileID: 785484614}
   - component: {fileID: 785484613}
   - component: {fileID: 785484612}
-  - component: {fileID: 785484611}
   - component: {fileID: 785484610}
   - component: {fileID: 785484609}
   - component: {fileID: 785484608}
+  - component: {fileID: 785484617}
+  - component: {fileID: 785484621}
+  - component: {fileID: 785484611}
   m_Layer: 0
   m_Name: Sphere (49)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15471,7 +15510,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -15589,22 +15628,101 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &785484611
-MonoBehaviour:
+--- !u!82 &785484611
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785484607}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &785484612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15737,10 +15855,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785484607}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &785484618
 MeshRenderer:
@@ -15797,6 +15915,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785484621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785484607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &823697923
 GameObject:
   m_ObjectHideFlags: 0
@@ -15807,19 +15943,19 @@ GameObject:
   - component: {fileID: 823697936}
   - component: {fileID: 823697935}
   - component: {fileID: 823697934}
-  - component: {fileID: 823697933}
   - component: {fileID: 823697932}
   - component: {fileID: 823697931}
   - component: {fileID: 823697930}
   - component: {fileID: 823697929}
   - component: {fileID: 823697928}
-  - component: {fileID: 823697927}
   - component: {fileID: 823697926}
   - component: {fileID: 823697925}
   - component: {fileID: 823697924}
+  - component: {fileID: 823697933}
+  - component: {fileID: 823697937}
   m_Layer: 0
   m_Name: Sphere (24)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15833,7 +15969,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -15951,22 +16087,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &823697927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 823697923}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &823697928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16099,10 +16219,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 823697923}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &823697934
 MeshRenderer:
@@ -16159,6 +16279,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &823697937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 823697923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &836708603
 GameObject:
   m_ObjectHideFlags: 0
@@ -16544,19 +16682,19 @@ GameObject:
   - component: {fileID: 849254933}
   - component: {fileID: 849254932}
   - component: {fileID: 849254931}
-  - component: {fileID: 849254930}
   - component: {fileID: 849254929}
   - component: {fileID: 849254928}
   - component: {fileID: 849254927}
   - component: {fileID: 849254926}
   - component: {fileID: 849254925}
-  - component: {fileID: 849254924}
   - component: {fileID: 849254923}
   - component: {fileID: 849254922}
   - component: {fileID: 849254921}
+  - component: {fileID: 849254930}
+  - component: {fileID: 849254934}
   m_Layer: 0
   m_Name: Sphere (20)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16570,7 +16708,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -16688,22 +16826,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &849254924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 849254920}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &849254925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16836,10 +16958,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 849254920}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &849254931
 MeshRenderer:
@@ -16896,6 +17018,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849254934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 849254920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &854381247
 GameObject:
   m_ObjectHideFlags: 0
@@ -17012,7 +17152,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.01, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &876709663
 GameObject:
@@ -17717,7 +17857,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.06}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 360.661, z: 0}
 --- !u!1 &956195285
 GameObject:
@@ -18104,19 +18244,19 @@ GameObject:
   - component: {fileID: 975341687}
   - component: {fileID: 975341686}
   - component: {fileID: 975341685}
-  - component: {fileID: 975341684}
   - component: {fileID: 975341695}
   - component: {fileID: 975341690}
   - component: {fileID: 975341688}
   - component: {fileID: 975341683}
   - component: {fileID: 975341689}
-  - component: {fileID: 975341691}
   - component: {fileID: 975341692}
   - component: {fileID: 975341694}
   - component: {fileID: 975341693}
+  - component: {fileID: 975341684}
+  - component: {fileID: 975341696}
   m_Layer: 0
   m_Name: Sphere (10)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18144,10 +18284,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 975341682}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &975341685
 MeshRenderer:
@@ -18202,7 +18342,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &975341688
 MonoBehaviour:
@@ -18302,22 +18442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &975341691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 975341682}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &975341692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18344,7 +18468,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -18456,6 +18580,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &975341696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 975341682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &987511210
 GameObject:
   m_ObjectHideFlags: 0
@@ -18829,7 +18971,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1022721810
 GameObject:
@@ -19216,19 +19358,19 @@ GameObject:
   - component: {fileID: 1025807655}
   - component: {fileID: 1025807654}
   - component: {fileID: 1025807653}
-  - component: {fileID: 1025807652}
   - component: {fileID: 1025807651}
   - component: {fileID: 1025807650}
   - component: {fileID: 1025807649}
   - component: {fileID: 1025807648}
   - component: {fileID: 1025807647}
-  - component: {fileID: 1025807646}
   - component: {fileID: 1025807645}
   - component: {fileID: 1025807644}
   - component: {fileID: 1025807643}
+  - component: {fileID: 1025807652}
+  - component: {fileID: 1025807656}
   m_Layer: 0
   m_Name: Sphere (41)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19242,7 +19384,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19360,22 +19502,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1025807646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025807642}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1025807647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19508,10 +19634,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1025807642}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1025807653
 MeshRenderer:
@@ -19568,6 +19694,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1025807656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025807642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1050932223
 GameObject:
   m_ObjectHideFlags: 0
@@ -19941,7 +20085,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110640629
 GameObject:
@@ -20722,7 +20866,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1130845171
 Prefab:
@@ -20761,7 +20905,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498762, guid: cbfd31aaac017204885fcc03f0579a1a, type: 2}
       propertyPath: m_RootOrder
-      value: 36
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 164482, guid: cbfd31aaac017204885fcc03f0579a1a, type: 2}
       propertyPath: m_Name
@@ -20792,19 +20936,19 @@ GameObject:
   - component: {fileID: 1137481844}
   - component: {fileID: 1137481843}
   - component: {fileID: 1137481842}
-  - component: {fileID: 1137481841}
   - component: {fileID: 1137481852}
   - component: {fileID: 1137481847}
   - component: {fileID: 1137481845}
   - component: {fileID: 1137481840}
   - component: {fileID: 1137481846}
-  - component: {fileID: 1137481848}
   - component: {fileID: 1137481849}
   - component: {fileID: 1137481851}
   - component: {fileID: 1137481850}
+  - component: {fileID: 1137481841}
+  - component: {fileID: 1137481853}
   m_Layer: 0
   m_Name: Sphere (5)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20832,10 +20976,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1137481839}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1137481842
 MeshRenderer:
@@ -20890,7 +21034,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1137481845
 MonoBehaviour:
@@ -20990,22 +21134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1137481848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1137481839}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1137481849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21032,7 +21160,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21144,6 +21272,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1137481853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137481839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1189224557
 GameObject:
   m_ObjectHideFlags: 0
@@ -21154,19 +21300,19 @@ GameObject:
   - component: {fileID: 1189224570}
   - component: {fileID: 1189224569}
   - component: {fileID: 1189224568}
-  - component: {fileID: 1189224567}
   - component: {fileID: 1189224566}
   - component: {fileID: 1189224565}
   - component: {fileID: 1189224564}
   - component: {fileID: 1189224563}
   - component: {fileID: 1189224562}
-  - component: {fileID: 1189224561}
   - component: {fileID: 1189224560}
   - component: {fileID: 1189224559}
   - component: {fileID: 1189224558}
+  - component: {fileID: 1189224567}
+  - component: {fileID: 1189224571}
   m_Layer: 0
   m_Name: Sphere (21)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21180,7 +21326,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21298,22 +21444,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1189224561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1189224557}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1189224562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21446,10 +21576,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189224557}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1189224568
 MeshRenderer:
@@ -21506,6 +21636,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1189224571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1189224557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1202997796
 GameObject:
   m_ObjectHideFlags: 0
@@ -21560,19 +21708,19 @@ GameObject:
   - component: {fileID: 1222181927}
   - component: {fileID: 1222181926}
   - component: {fileID: 1222181925}
-  - component: {fileID: 1222181924}
   - component: {fileID: 1222181923}
   - component: {fileID: 1222181922}
   - component: {fileID: 1222181921}
   - component: {fileID: 1222181920}
   - component: {fileID: 1222181919}
-  - component: {fileID: 1222181918}
   - component: {fileID: 1222181917}
   - component: {fileID: 1222181916}
   - component: {fileID: 1222181915}
+  - component: {fileID: 1222181924}
+  - component: {fileID: 1222181928}
   m_Layer: 0
   m_Name: Sphere (43)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21586,7 +21734,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21704,22 +21852,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1222181918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1222181914}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1222181919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21852,10 +21984,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222181914}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1222181925
 MeshRenderer:
@@ -21912,6 +22044,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1222181928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222181914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1224222940
 GameObject:
   m_ObjectHideFlags: 0
@@ -21922,19 +22072,19 @@ GameObject:
   - component: {fileID: 1224222953}
   - component: {fileID: 1224222952}
   - component: {fileID: 1224222951}
-  - component: {fileID: 1224222950}
   - component: {fileID: 1224222949}
   - component: {fileID: 1224222948}
   - component: {fileID: 1224222947}
   - component: {fileID: 1224222946}
   - component: {fileID: 1224222945}
-  - component: {fileID: 1224222944}
   - component: {fileID: 1224222943}
   - component: {fileID: 1224222942}
   - component: {fileID: 1224222941}
+  - component: {fileID: 1224222950}
+  - component: {fileID: 1224222954}
   m_Layer: 0
   m_Name: Sphere (18)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21948,7 +22098,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -22066,22 +22216,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1224222944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1224222940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1224222945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22214,10 +22348,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1224222940}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1224222951
 MeshRenderer:
@@ -22274,6 +22408,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1224222954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224222940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1232594283
 GameObject:
   m_ObjectHideFlags: 0
@@ -24091,7 +24243,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1378095746
 GameObject:
@@ -24254,19 +24406,19 @@ GameObject:
   - component: {fileID: 1395454232}
   - component: {fileID: 1395454231}
   - component: {fileID: 1395454230}
-  - component: {fileID: 1395454229}
   - component: {fileID: 1395454228}
   - component: {fileID: 1395454227}
   - component: {fileID: 1395454226}
   - component: {fileID: 1395454225}
   - component: {fileID: 1395454224}
-  - component: {fileID: 1395454223}
   - component: {fileID: 1395454222}
   - component: {fileID: 1395454221}
   - component: {fileID: 1395454220}
+  - component: {fileID: 1395454229}
+  - component: {fileID: 1395454233}
   m_Layer: 0
   m_Name: Sphere (47)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24280,7 +24432,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -24398,22 +24550,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1395454223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1395454219}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1395454224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24546,10 +24682,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395454219}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1395454230
 MeshRenderer:
@@ -24606,6 +24742,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1395454233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1395454219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1404604464
 GameObject:
   m_ObjectHideFlags: 0
@@ -24617,7 +24771,6 @@ GameObject:
   - component: {fileID: 1404604467}
   - component: {fileID: 1404604466}
   - component: {fileID: 1404604480}
-  - component: {fileID: 1404604465}
   - component: {fileID: 1404604478}
   - component: {fileID: 1404604473}
   - component: {fileID: 1404604469}
@@ -24625,13 +24778,15 @@ GameObject:
   - component: {fileID: 1404604471}
   - component: {fileID: 1404604470}
   - component: {fileID: 1404604472}
-  - component: {fileID: 1404604474}
   - component: {fileID: 1404604475}
   - component: {fileID: 1404604477}
   - component: {fileID: 1404604476}
+  - component: {fileID: 1404604481}
+  - component: {fileID: 1404604465}
+  - component: {fileID: 1404604482}
   m_Layer: 0
   m_Name: Sphere (0)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24646,7 +24801,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1404604466
 MeshRenderer:
@@ -24701,7 +24856,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1404604469
 MonoBehaviour:
@@ -24829,22 +24984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1404604474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1404604464}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1404604475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24871,7 +25010,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 31e36701a5d46bd44b52c1737bfb5e2b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -25018,6 +25157,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lefthand: {fileID: 1289395568}
   rightHand: {fileID: 893068247}
+--- !u!135 &1404604481
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404604464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1404604482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1404604464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1415115414
 GameObject:
   m_ObjectHideFlags: 0
@@ -25028,19 +25197,19 @@ GameObject:
   - component: {fileID: 1415115427}
   - component: {fileID: 1415115426}
   - component: {fileID: 1415115425}
-  - component: {fileID: 1415115424}
   - component: {fileID: 1415115423}
   - component: {fileID: 1415115422}
   - component: {fileID: 1415115421}
   - component: {fileID: 1415115420}
   - component: {fileID: 1415115419}
-  - component: {fileID: 1415115418}
   - component: {fileID: 1415115417}
   - component: {fileID: 1415115416}
   - component: {fileID: 1415115415}
+  - component: {fileID: 1415115424}
+  - component: {fileID: 1415115428}
   m_Layer: 0
   m_Name: Sphere (22)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25054,7 +25223,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -25172,22 +25341,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1415115418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1415115414}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1415115419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25320,10 +25473,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415115414}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1415115425
 MeshRenderer:
@@ -25380,6 +25533,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1415115428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1415115414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1419303093
 GameObject:
   m_ObjectHideFlags: 0
@@ -25539,19 +25710,19 @@ GameObject:
   - component: {fileID: 1435523760}
   - component: {fileID: 1435523759}
   - component: {fileID: 1435523758}
-  - component: {fileID: 1435523757}
   - component: {fileID: 1435523768}
   - component: {fileID: 1435523763}
   - component: {fileID: 1435523761}
   - component: {fileID: 1435523756}
   - component: {fileID: 1435523762}
-  - component: {fileID: 1435523764}
   - component: {fileID: 1435523765}
   - component: {fileID: 1435523767}
   - component: {fileID: 1435523766}
+  - component: {fileID: 1435523757}
+  - component: {fileID: 1435523769}
   m_Layer: 0
   m_Name: Sphere (2)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25579,10 +25750,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1435523755}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1435523758
 MeshRenderer:
@@ -25637,7 +25808,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1435523761
 MonoBehaviour:
@@ -25737,22 +25908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1435523764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1435523755}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1435523765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25779,7 +25934,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -25891,6 +26046,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1435523769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1435523755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1458816340
 GameObject:
   m_ObjectHideFlags: 0
@@ -25901,19 +26074,19 @@ GameObject:
   - component: {fileID: 1458816353}
   - component: {fileID: 1458816352}
   - component: {fileID: 1458816351}
-  - component: {fileID: 1458816350}
   - component: {fileID: 1458816349}
   - component: {fileID: 1458816348}
   - component: {fileID: 1458816347}
   - component: {fileID: 1458816346}
   - component: {fileID: 1458816345}
-  - component: {fileID: 1458816344}
   - component: {fileID: 1458816343}
   - component: {fileID: 1458816342}
   - component: {fileID: 1458816341}
+  - component: {fileID: 1458816350}
+  - component: {fileID: 1458816354}
   m_Layer: 0
   m_Name: Sphere (32)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25927,7 +26100,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -26045,22 +26218,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1458816344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1458816340}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1458816345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26193,10 +26350,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1458816340}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1458816351
 MeshRenderer:
@@ -26253,6 +26410,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458816354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458816340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1481718184
 GameObject:
   m_ObjectHideFlags: 0
@@ -26626,7 +26801,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482773623
 GameObject:
@@ -27376,7 +27551,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1492475646
 GameObject:
@@ -27475,19 +27650,19 @@ GameObject:
   - component: {fileID: 1503496532}
   - component: {fileID: 1503496531}
   - component: {fileID: 1503496530}
-  - component: {fileID: 1503496529}
   - component: {fileID: 1503496540}
   - component: {fileID: 1503496535}
   - component: {fileID: 1503496533}
   - component: {fileID: 1503496528}
   - component: {fileID: 1503496534}
-  - component: {fileID: 1503496536}
   - component: {fileID: 1503496537}
   - component: {fileID: 1503496539}
   - component: {fileID: 1503496538}
+  - component: {fileID: 1503496529}
+  - component: {fileID: 1503496541}
   m_Layer: 0
   m_Name: Sphere (6)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27515,10 +27690,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503496527}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1503496530
 MeshRenderer:
@@ -27573,7 +27748,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1503496533
 MonoBehaviour:
@@ -27673,22 +27848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1503496536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1503496527}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1503496537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27715,7 +27874,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -27827,6 +27986,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1503496541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1503496527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1505736258
 GameObject:
   m_ObjectHideFlags: 0
@@ -28200,7 +28377,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512059283
 GameObject:
@@ -28212,19 +28389,19 @@ GameObject:
   - component: {fileID: 1512059296}
   - component: {fileID: 1512059295}
   - component: {fileID: 1512059294}
-  - component: {fileID: 1512059293}
   - component: {fileID: 1512059292}
   - component: {fileID: 1512059291}
   - component: {fileID: 1512059290}
   - component: {fileID: 1512059289}
   - component: {fileID: 1512059288}
-  - component: {fileID: 1512059287}
   - component: {fileID: 1512059286}
   - component: {fileID: 1512059285}
   - component: {fileID: 1512059284}
+  - component: {fileID: 1512059293}
+  - component: {fileID: 1512059297}
   m_Layer: 0
   m_Name: Sphere (45)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28238,7 +28415,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -28356,22 +28533,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1512059287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1512059283}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1512059288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28504,10 +28665,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1512059283}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1512059294
 MeshRenderer:
@@ -28564,6 +28725,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512059297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512059283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1529326956
 GameObject:
   m_ObjectHideFlags: 0
@@ -28574,19 +28753,19 @@ GameObject:
   - component: {fileID: 1529326969}
   - component: {fileID: 1529326968}
   - component: {fileID: 1529326967}
-  - component: {fileID: 1529326966}
   - component: {fileID: 1529326965}
   - component: {fileID: 1529326964}
   - component: {fileID: 1529326963}
   - component: {fileID: 1529326962}
   - component: {fileID: 1529326961}
-  - component: {fileID: 1529326960}
   - component: {fileID: 1529326959}
   - component: {fileID: 1529326958}
   - component: {fileID: 1529326957}
+  - component: {fileID: 1529326966}
+  - component: {fileID: 1529326970}
   m_Layer: 0
   m_Name: Sphere (19)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28600,7 +28779,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -28718,22 +28897,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1529326960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1529326956}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1529326961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28866,10 +29029,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529326956}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1529326967
 MeshRenderer:
@@ -28926,6 +29089,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1529326970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529326956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1594854780
 GameObject:
   m_ObjectHideFlags: 0
@@ -29115,19 +29296,19 @@ GameObject:
   - component: {fileID: 1626497040}
   - component: {fileID: 1626497039}
   - component: {fileID: 1626497038}
-  - component: {fileID: 1626497037}
   - component: {fileID: 1626497048}
   - component: {fileID: 1626497043}
   - component: {fileID: 1626497041}
   - component: {fileID: 1626497036}
   - component: {fileID: 1626497042}
-  - component: {fileID: 1626497044}
   - component: {fileID: 1626497045}
   - component: {fileID: 1626497047}
   - component: {fileID: 1626497046}
+  - component: {fileID: 1626497037}
+  - component: {fileID: 1626497049}
   m_Layer: 0
   m_Name: Sphere (3)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29155,10 +29336,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1626497035}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1626497038
 MeshRenderer:
@@ -29213,7 +29394,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1626497041
 MonoBehaviour:
@@ -29313,22 +29494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1626497044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1626497035}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1626497045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29355,7 +29520,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -29467,6 +29632,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1626497049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626497035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1654924201
 GameObject:
   m_ObjectHideFlags: 0
@@ -29477,19 +29660,19 @@ GameObject:
   - component: {fileID: 1654924206}
   - component: {fileID: 1654924205}
   - component: {fileID: 1654924204}
-  - component: {fileID: 1654924203}
   - component: {fileID: 1654924214}
   - component: {fileID: 1654924209}
   - component: {fileID: 1654924207}
   - component: {fileID: 1654924202}
   - component: {fileID: 1654924208}
-  - component: {fileID: 1654924210}
   - component: {fileID: 1654924211}
   - component: {fileID: 1654924213}
   - component: {fileID: 1654924212}
+  - component: {fileID: 1654924203}
+  - component: {fileID: 1654924215}
   m_Layer: 0
   m_Name: Sphere (8)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29517,10 +29700,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1654924201}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1654924204
 MeshRenderer:
@@ -29575,7 +29758,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1654924207
 MonoBehaviour:
@@ -29675,22 +29858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1654924210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1654924201}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1654924211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29717,7 +29884,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -29829,6 +29996,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1654924215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654924201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1655986206
 GameObject:
   m_ObjectHideFlags: 0
@@ -29839,19 +30024,19 @@ GameObject:
   - component: {fileID: 1655986219}
   - component: {fileID: 1655986218}
   - component: {fileID: 1655986217}
-  - component: {fileID: 1655986216}
   - component: {fileID: 1655986215}
   - component: {fileID: 1655986214}
   - component: {fileID: 1655986213}
   - component: {fileID: 1655986212}
   - component: {fileID: 1655986211}
-  - component: {fileID: 1655986210}
   - component: {fileID: 1655986209}
   - component: {fileID: 1655986208}
   - component: {fileID: 1655986207}
+  - component: {fileID: 1655986216}
+  - component: {fileID: 1655986220}
   m_Layer: 0
   m_Name: Sphere (28)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29865,7 +30050,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -29983,22 +30168,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1655986210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1655986206}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1655986211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30131,10 +30300,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1655986206}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1655986217
 MeshRenderer:
@@ -30191,6 +30360,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1655986220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1655986206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1660473497
 GameObject:
   m_ObjectHideFlags: 0
@@ -30201,19 +30388,19 @@ GameObject:
   - component: {fileID: 1660473502}
   - component: {fileID: 1660473501}
   - component: {fileID: 1660473500}
-  - component: {fileID: 1660473499}
   - component: {fileID: 1660473510}
   - component: {fileID: 1660473505}
   - component: {fileID: 1660473503}
   - component: {fileID: 1660473498}
   - component: {fileID: 1660473504}
-  - component: {fileID: 1660473506}
   - component: {fileID: 1660473507}
   - component: {fileID: 1660473509}
   - component: {fileID: 1660473508}
+  - component: {fileID: 1660473499}
+  - component: {fileID: 1660473511}
   m_Layer: 0
   m_Name: Sphere (15)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30241,10 +30428,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1660473497}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1660473500
 MeshRenderer:
@@ -30299,7 +30486,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1660473503
 MonoBehaviour:
@@ -30399,22 +30586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1660473506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1660473497}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1660473507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30441,7 +30612,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -30553,6 +30724,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1660473511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1660473497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1666430399
 GameObject:
   m_ObjectHideFlags: 0
@@ -31301,7 +31490,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725144314
 GameObject:
@@ -31313,19 +31502,19 @@ GameObject:
   - component: {fileID: 1725144327}
   - component: {fileID: 1725144326}
   - component: {fileID: 1725144325}
-  - component: {fileID: 1725144324}
   - component: {fileID: 1725144323}
   - component: {fileID: 1725144322}
   - component: {fileID: 1725144321}
   - component: {fileID: 1725144320}
   - component: {fileID: 1725144319}
-  - component: {fileID: 1725144318}
   - component: {fileID: 1725144317}
   - component: {fileID: 1725144316}
   - component: {fileID: 1725144315}
+  - component: {fileID: 1725144324}
+  - component: {fileID: 1725144328}
   m_Layer: 0
   m_Name: Sphere (42)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31339,7 +31528,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -31457,22 +31646,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1725144318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1725144314}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1725144319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31605,10 +31778,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725144314}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1725144325
 MeshRenderer:
@@ -31665,6 +31838,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725144328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725144314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1791649346
 GameObject:
   m_ObjectHideFlags: 0
@@ -31675,19 +31866,19 @@ GameObject:
   - component: {fileID: 1791649359}
   - component: {fileID: 1791649358}
   - component: {fileID: 1791649357}
-  - component: {fileID: 1791649356}
   - component: {fileID: 1791649355}
   - component: {fileID: 1791649354}
   - component: {fileID: 1791649353}
   - component: {fileID: 1791649352}
   - component: {fileID: 1791649351}
-  - component: {fileID: 1791649350}
   - component: {fileID: 1791649349}
   - component: {fileID: 1791649348}
   - component: {fileID: 1791649347}
+  - component: {fileID: 1791649356}
+  - component: {fileID: 1791649360}
   m_Layer: 0
   m_Name: Sphere (37)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31701,7 +31892,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -31819,22 +32010,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1791649350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1791649346}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1791649351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31967,10 +32142,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791649346}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1791649357
 MeshRenderer:
@@ -32027,6 +32202,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1791649360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791649346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1795289341
 GameObject:
   m_ObjectHideFlags: 0
@@ -32831,19 +33024,19 @@ GameObject:
   - component: {fileID: 1892440294}
   - component: {fileID: 1892440293}
   - component: {fileID: 1892440292}
-  - component: {fileID: 1892440291}
   - component: {fileID: 1892440302}
   - component: {fileID: 1892440297}
   - component: {fileID: 1892440295}
   - component: {fileID: 1892440290}
   - component: {fileID: 1892440296}
-  - component: {fileID: 1892440298}
   - component: {fileID: 1892440299}
   - component: {fileID: 1892440301}
   - component: {fileID: 1892440300}
+  - component: {fileID: 1892440291}
+  - component: {fileID: 1892440303}
   m_Layer: 0
   m_Name: Sphere (16)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32871,10 +33064,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892440289}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1892440292
 MeshRenderer:
@@ -32929,7 +33122,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1892440295
 MonoBehaviour:
@@ -33029,22 +33222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1892440298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1892440289}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1892440299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33071,7 +33248,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -33183,6 +33360,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1892440303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1892440289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1898733712
 GameObject:
   m_ObjectHideFlags: 0
@@ -33193,19 +33388,19 @@ GameObject:
   - component: {fileID: 1898733725}
   - component: {fileID: 1898733724}
   - component: {fileID: 1898733723}
-  - component: {fileID: 1898733722}
   - component: {fileID: 1898733721}
   - component: {fileID: 1898733720}
   - component: {fileID: 1898733719}
   - component: {fileID: 1898733718}
   - component: {fileID: 1898733717}
-  - component: {fileID: 1898733716}
   - component: {fileID: 1898733715}
   - component: {fileID: 1898733714}
   - component: {fileID: 1898733713}
+  - component: {fileID: 1898733722}
+  - component: {fileID: 1898733726}
   m_Layer: 0
   m_Name: Sphere (25)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33219,7 +33414,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -33337,22 +33532,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1898733716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1898733712}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1898733717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33485,10 +33664,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898733712}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1898733723
 MeshRenderer:
@@ -33545,6 +33724,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898733726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1898733712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1910638623
 GameObject:
   m_ObjectHideFlags: 0
@@ -33809,19 +34006,19 @@ GameObject:
   - component: {fileID: 1924710299}
   - component: {fileID: 1924710298}
   - component: {fileID: 1924710297}
-  - component: {fileID: 1924710296}
   - component: {fileID: 1924710307}
   - component: {fileID: 1924710302}
   - component: {fileID: 1924710300}
   - component: {fileID: 1924710295}
   - component: {fileID: 1924710301}
-  - component: {fileID: 1924710303}
   - component: {fileID: 1924710304}
   - component: {fileID: 1924710306}
   - component: {fileID: 1924710305}
+  - component: {fileID: 1924710296}
+  - component: {fileID: 1924710308}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33849,10 +34046,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1924710294}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1924710297
 MeshRenderer:
@@ -33907,7 +34104,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1924710300
 MonoBehaviour:
@@ -34007,22 +34204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1924710303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1924710294}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1924710304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34049,7 +34230,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -34161,6 +34342,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1924710308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1924710294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1935647094
 GameObject:
   m_ObjectHideFlags: 0
@@ -34171,19 +34370,19 @@ GameObject:
   - component: {fileID: 1935647107}
   - component: {fileID: 1935647106}
   - component: {fileID: 1935647105}
-  - component: {fileID: 1935647104}
   - component: {fileID: 1935647103}
   - component: {fileID: 1935647102}
   - component: {fileID: 1935647101}
   - component: {fileID: 1935647100}
   - component: {fileID: 1935647099}
-  - component: {fileID: 1935647098}
   - component: {fileID: 1935647097}
   - component: {fileID: 1935647096}
   - component: {fileID: 1935647095}
+  - component: {fileID: 1935647104}
+  - component: {fileID: 1935647108}
   m_Layer: 0
   m_Name: Sphere (38)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34197,7 +34396,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -34315,22 +34514,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1935647098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1935647094}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1935647099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34463,10 +34646,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1935647094}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1935647105
 MeshRenderer:
@@ -34523,6 +34706,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1935647108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935647094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1940147014
 GameObject:
   m_ObjectHideFlags: 0
@@ -35658,19 +35859,19 @@ GameObject:
   - component: {fileID: 1946642911}
   - component: {fileID: 1946642910}
   - component: {fileID: 1946642909}
-  - component: {fileID: 1946642908}
   - component: {fileID: 1946642907}
   - component: {fileID: 1946642906}
   - component: {fileID: 1946642905}
   - component: {fileID: 1946642904}
   - component: {fileID: 1946642903}
-  - component: {fileID: 1946642902}
   - component: {fileID: 1946642901}
   - component: {fileID: 1946642900}
   - component: {fileID: 1946642899}
+  - component: {fileID: 1946642908}
+  - component: {fileID: 1946642912}
   m_Layer: 0
   m_Name: Sphere (26)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35684,7 +35885,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -35802,22 +36003,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &1946642902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1946642898}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &1946642903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35950,10 +36135,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946642898}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1946642909
 MeshRenderer:
@@ -36010,6 +36195,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946642912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946642898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &1963904777
 GameObject:
   m_ObjectHideFlags: 0
@@ -36149,7 +36352,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.06}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1984399251
 GameObject:
@@ -36524,7 +36727,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987917546
 GameObject:
@@ -37274,7 +37477,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2010316511
 GameObject:
@@ -37286,19 +37489,19 @@ GameObject:
   - component: {fileID: 2010316516}
   - component: {fileID: 2010316515}
   - component: {fileID: 2010316514}
-  - component: {fileID: 2010316513}
   - component: {fileID: 2010316524}
   - component: {fileID: 2010316519}
   - component: {fileID: 2010316517}
   - component: {fileID: 2010316512}
   - component: {fileID: 2010316518}
-  - component: {fileID: 2010316520}
   - component: {fileID: 2010316521}
   - component: {fileID: 2010316523}
   - component: {fileID: 2010316522}
+  - component: {fileID: 2010316513}
+  - component: {fileID: 2010316525}
   m_Layer: 0
   m_Name: Sphere (7)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37326,10 +37529,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2010316511}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2010316514
 MeshRenderer:
@@ -37384,7 +37587,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2010316517
 MonoBehaviour:
@@ -37484,22 +37687,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e463fc57f97a4604dbdea0766e134f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2010316520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010316511}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &2010316521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37526,7 +37713,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -37638,6 +37825,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c675c0ec220b34048b3475c38be2e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2010316525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2010316511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &2013976030
 GameObject:
   m_ObjectHideFlags: 0
@@ -37648,19 +37853,19 @@ GameObject:
   - component: {fileID: 2013976043}
   - component: {fileID: 2013976042}
   - component: {fileID: 2013976041}
-  - component: {fileID: 2013976040}
   - component: {fileID: 2013976039}
   - component: {fileID: 2013976038}
   - component: {fileID: 2013976037}
   - component: {fileID: 2013976036}
   - component: {fileID: 2013976035}
-  - component: {fileID: 2013976034}
   - component: {fileID: 2013976033}
   - component: {fileID: 2013976032}
   - component: {fileID: 2013976031}
+  - component: {fileID: 2013976040}
+  - component: {fileID: 2013976044}
   m_Layer: 0
   m_Name: Sphere (46)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37674,7 +37879,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -37792,22 +37997,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &2013976034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2013976030}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &2013976035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37940,10 +38129,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2013976030}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2013976041
 MeshRenderer:
@@ -38000,6 +38189,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2013976044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2013976030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &2018648224
 GameObject:
   m_ObjectHideFlags: 0
@@ -38824,7 +39031,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085164593
 GameObject:
@@ -38836,19 +39043,19 @@ GameObject:
   - component: {fileID: 2085164606}
   - component: {fileID: 2085164605}
   - component: {fileID: 2085164604}
-  - component: {fileID: 2085164603}
   - component: {fileID: 2085164602}
   - component: {fileID: 2085164601}
   - component: {fileID: 2085164600}
   - component: {fileID: 2085164599}
   - component: {fileID: 2085164598}
-  - component: {fileID: 2085164597}
   - component: {fileID: 2085164596}
   - component: {fileID: 2085164595}
   - component: {fileID: 2085164594}
+  - component: {fileID: 2085164603}
+  - component: {fileID: 2085164607}
   m_Layer: 0
   m_Name: Sphere (44)
-  m_TagString: Untagged
+  m_TagString: SideBalls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38862,7 +39069,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f6dcc3bf04e0b34d827fba30cf7d8dd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 838edf0f04068ef49a5782a99ec6ec18, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -38980,22 +39187,6 @@ MonoBehaviour:
   disableAllOtherActionSets: 0
   activateOnStart: 1
   deactivateOnDestroy: 1
---- !u!114 &2085164597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2085164593}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd43d62083060e24c8d9d14b719e100b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boolean:
-    actionPath: 
-    needsReinit: 0
-  leftHandPos: {fileID: 0}
-  rightHandPos: {fileID: 0}
 --- !u!114 &2085164598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39128,10 +39319,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2085164593}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2085164604
 MeshRenderer:
@@ -39188,6 +39379,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085164607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2085164593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8dd78577b6ecd40bb1ef60c6139386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vibration:
+    actionPath: /actions/default/out/Haptic
+    needsReinit: 0
+  boolean:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  audioType1: {fileID: 3556064}
 --- !u!1 &2126572685
 GameObject:
   m_ObjectHideFlags: 0
@@ -39561,7 +39770,7 @@ Transform:
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2141062783
 GameObject:
